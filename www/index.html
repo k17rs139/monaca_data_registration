@@ -46,9 +46,9 @@
             for(var i = 0;i<results.length;i++){
                var data =results[i].get("message");
             var update = results[i].get("updateDate");
-            msg +=data + ":"+update;
+            msg +=data + ":"+update+"<br>";// "\n"kaigyou
             }
-            $("#fetch").html(msg);
+            $("#fetch").html(msg);//$ is method name. $ is JQuery. fetchと言うidを持つ要素の開始タグと終了タグの間の内容をmsgで置き換える
           })
         }
 
@@ -63,8 +63,8 @@
     <div>fetch demo</div>
     <div id ="fetch">data here </div>
 
-      <a class="button--large" onclick="fetchAll()">Fetch All</a>
-      <div>fetch all demo</div>
-    <div id ="fetch">data here </div>
+   <a class="button--large" onclick="fetchAll()">Fetch All</a>
+   <div>fetch all demo</div>
+   <div id ="fetch">data here </div>
 </body>
 </html>
